@@ -1,6 +1,8 @@
-# Exp-02-Implementation-of-Half-Adder-and-Full-Adder-circuit
+# Exp-02 Implementation of Half Adder and Full Adder circuit
 
-# Implementation-of-Half-Adder-and-Full-Adder-circuit
+# Implementation ofHalf Adder and Full Adder circuit
+#### NAME:Nijeesh NJ
+#### Register no.: 23010565
 ### AIM:
 To design a half adder and full adder circuit and verify its truth table in Quartus using Verilog programming.
 
@@ -34,21 +36,54 @@ Sum =A’B’Cin + A’BCin’ + ABCin + AB’Cin’ = A ⊕ B ⊕ Cin Carry = A
 Connect the supply (+5V) to the circuit
 Switch ON the main switch
 If the output is 1, then the led glows.
-### 
-Program:
-/*
+### Program:
+
 Program to design a half adder and full adder circuit and verify its truth table in quartus using Verilog programming.
-Developed by: 
-RegisterNumber:  
-*/
-Logic symbol & Truthtable
-RTL realization
+#### HALF ADDER
 
-### Output:
-### RTL
-### TIMING DIAGRAM
+module Halfadder(sum,a,b,carry);
 
+input a,b;
 
-### TRUTH TABLE 
+output sum,carry;
+
+xor(sum,a,b);
+
+and(carry,a,b);
+
+endmodule 
+
+#### FULL ADDER:
+
+module fulladder(a,b,c,sum,carry);
+
+input a,b,c;
+
+output sum,carry;
+
+xor(sum,a,b,c);
+
+assign carry=a&b | b&c | a&c;
+
+endmodule 
+
+### TRUTH TABLE HALF ADDER:
+![image](https://github.com/Nijeesh-bit/Exp-02-Implementation-of-Half-Adder-and-Full-Adder-circuit/assets/89188014/ae2d40fe-6869-431b-93b4-1e274bd25771)
+
+### RTL realization HALF ADDER:
+![image](https://github.com/Nijeesh-bit/Exp-02-Implementation-of-Half-Adder-and-Full-Adder-circuit/assets/89188014/b5171707-bf9a-4e39-9113-ba60af41353b)
+
+### TIMING DIAGRAM HALF ADDER:
+![image](https://github.com/Nijeesh-bit/Exp-02-Implementation-of-Half-Adder-and-Full-Adder-circuit/assets/89188014/b0ab1794-2348-44c1-997f-56148a344bc4)
+
+### TRUTH TABLE FULL ADDER:
+![image](https://github.com/Nijeesh-bit/Exp-02-Implementation-of-Half-Adder-and-Full-Adder-circuit/assets/89188014/786927bd-7c2a-4832-8389-da4b876a6ab3)
+
+### RTL realization FULL ADDER:
+![image](https://github.com/Nijeesh-bit/Exp-02-Implementation-of-Half-Adder-and-Full-Adder-circuit/assets/89188014/4aa2d7c9-f4e6-4739-8181-4ecd4e9c6c6f)
+
+### TIMING DIAGRAM HALF ADDER:
+![image](https://github.com/Nijeesh-bit/Exp-02-Implementation-of-Half-Adder-and-Full-Adder-circuit/assets/89188014/b3e9c25e-2c1e-4bf1-9561-564710da7214)
 
 ### Result:
+Thus the given logic functions are implemented using  and their operations are verified using Verilog programming.
