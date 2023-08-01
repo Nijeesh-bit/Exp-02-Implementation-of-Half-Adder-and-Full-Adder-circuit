@@ -1,6 +1,5 @@
 # Experiment-03 Implementation of Half Adder and Full Adder circuit
 
-# Implementation of Half Adder and Full Adder circuit
 #### NAME:Nijeesh NJ
 #### Register no.: 23010565
 ### AIM:
