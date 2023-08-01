@@ -1,6 +1,6 @@
 # Experiment-03 Implementation of Half Adder and Full Adder circuit
 
-# Implementation ofHalf Adder and Full Adder circuit
+# Implementation of Half Adder and Full Adder circuit
 #### NAME:Nijeesh NJ
 #### Register no.: 23010565
 ### AIM:
@@ -55,40 +55,30 @@ Sum =A’B’Cin + A’BCin’ + ABCin + AB’Cin’ = A ⊕ B ⊕ Cin Carry = A
 6. Verification:
    - Click on "File" > "New" > "Verification/Debugging Files" > "University Program VWF".
    - Once Waveform is created Right Click on the Input/Output Panel > " Insert Node or Bus" > Click on Node Finder > Click On "List" > Select All.
-   - Give the Input Combinations according to the Truth Table amd then simulate the Output Waveform.
+   - Give the Input Combinations according to the Truth Table and then simulate the Output Waveform.
 
 
 ### Program:
 
 Program to design a half adder and full adder circuit and verify its truth table in quartus using Verilog programming.
 #### HALF ADDER
-
+```
 module Halfadder(sum,a,b,carry);
-
 input a,b;
-
 output sum,carry;
-
 xor(sum,a,b);
-
 and(carry,a,b);
-
 endmodule 
-
+```
 #### FULL ADDER:
-
+```
 module fulladder(a,b,c,sum,carry);
-
 input a,b,c;
-
 output sum,carry;
-
 xor(sum,a,b,c);
-
 assign carry=a&b | b&c | a&c;
-
 endmodule 
-
+```
 ### TRUTH TABLE HALF ADDER:
 ![image](https://github.com/Nijeesh-bit/Exp-02-Implementation-of-Half-Adder-and-Full-Adder-circuit/assets/89188014/ae2d40fe-6869-431b-93b4-1e274bd25771)
 
